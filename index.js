@@ -27,6 +27,12 @@ const cosasQueAprendimos = [
 
 function main() {
   const listaEl = document.querySelector(".lista");
+  // Recorro cada elemento 'li' de la lista
+  for (let index = listaEl.children.length - 1; index >= 0; index--) {
+    // Elimino el elemento 'li' de la lista
+    listaEl.removeChild(listaEl.children[index]);
+  }
+
   for (let algo of cosasQueAprendimos) {
     const tema = algo.tema;
     const clase = algo.class;
